@@ -239,7 +239,7 @@ export default interface IElement extends IChildNode, INonDocumentTypeChildNode,
 	 * @param attribute Attribute.
 	 * @returns Replaced attribute.
 	 */
-	setAttributeNode(attribute: IAttr): IAttr;
+	setAttributeNode(attribute: IAttr): IAttr | null;
 
 	/**
 	 * The setAttributeNodeNS() method adds a new Attr node to the specified element.
@@ -247,7 +247,7 @@ export default interface IElement extends IChildNode, INonDocumentTypeChildNode,
 	 * @param attribute Attribute.
 	 * @returns Replaced attribute.
 	 */
-	setAttributeNodeNS(attribute: IAttr): IAttr;
+	setAttributeNodeNS(attribute: IAttr): IAttr | null;
 
 	/**
 	 * Returns an Attr node.
@@ -255,7 +255,7 @@ export default interface IElement extends IChildNode, INonDocumentTypeChildNode,
 	 * @param name Name.
 	 * @returns Replaced attribute.
 	 */
-	getAttributeNode(name: string): IAttr;
+	getAttributeNode(name: string): IAttr | null;
 
 	/**
 	 * Returns a namespaced Attr node.
@@ -264,7 +264,7 @@ export default interface IElement extends IChildNode, INonDocumentTypeChildNode,
 	 * @param nodeName Node name.
 	 * @returns Replaced attribute.
 	 */
-	getAttributeNodeNS(namespace: string | null, nodeName: string): IAttr;
+	getAttributeNodeNS(namespace: string | null, nodeName: string): IAttr | null;
 
 	/**
 	 * Removes an Attr node.
@@ -280,7 +280,7 @@ export default interface IElement extends IChildNode, INonDocumentTypeChildNode,
 	 * @param attribute Attribute.
 	 * @returns Removed attribute.
 	 */
-	removeAttributeNodeNS(attribute: IAttr): IAttr;
+	removeAttributeNodeNS(attribute: IAttr): IAttr | null;
 
 	/**
 	 * Clones a node.
